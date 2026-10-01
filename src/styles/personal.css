@@ -1,0 +1,201 @@
+.personal-hero {
+  min-height: 680px;
+  display: block;
+  color: #171b20;
+  background: #f4f2ee;
+}
+
+.personal-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  min-height: 680px;
+  gap: 62px;
+  align-items: center;
+}
+
+.personal-hero-copy {
+  position: relative;
+  z-index: 2;
+  padding: 72px 0;
+  animation: hero-rise .9s .1s both;
+}
+
+.personal-hero .eyebrow {
+  color: #b9232e;
+  margin-bottom: 29px;
+}
+
+.personal-hero h1 {
+  max-width: 660px;
+  font-size: clamp(46px, 4.9vw, 72px);
+  line-height: 1.14;
+  margin-bottom: 25px;
+  color: #171b20;
+}
+
+.personal-hero h1 em {
+  color: #171b20;
+  white-space: nowrap;
+}
+
+.personal-hero h1 em::after {
+  height: 5px;
+  bottom: -1px;
+  z-index: 0;
+  opacity: .9;
+}
+
+.personal-hero .hero-copy {
+  color: #555d63;
+  max-width: 555px;
+  font-size: 16px;
+}
+
+.personal-hero .text-link { color: #20262a; }
+.personal-hero .hero-note { color: #757d82; }
+.personal-hero .hero-note-icon { color: #bc2632; }
+
+.personal-hero-media {
+  position: relative;
+  height: 620px;
+  align-self: end;
+  margin-top: 55px;
+}
+
+.personal-hero-media::before {
+  content: '';
+  position: absolute;
+  inset: 34px -32px 0 34px;
+  background: #c51e2b;
+}
+
+.portrait-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #d8d5ce;
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(.82);
+  transition: transform .8s ease, filter .8s ease;
+}
+
+.personal-hero-media:hover img {
+  transform: scale(1.025);
+  filter: saturate(1);
+}
+
+.portrait-caption {
+  position: absolute;
+  left: -36px;
+  bottom: 27px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 235px;
+  padding: 17px 20px;
+  color: white;
+  background: #171c21;
+  box-shadow: 0 15px 30px #0b121844;
+}
+
+.portrait-caption-line {
+  width: 3px;
+  height: 34px;
+  background: #db1d2d;
+}
+
+.portrait-caption strong,
+.portrait-caption small { display: block; }
+.portrait-caption strong { font: 800 12px Manrope, Arial, sans-serif; letter-spacing: .12em; }
+.portrait-caption small { margin-top: 5px; color: #bdc5c9; font-size: 10px; }
+
+.portrait-vertical {
+  position: absolute;
+  right: -23px;
+  top: 57px;
+  writing-mode: vertical-rl;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .19em;
+}
+
+#freddy, #beneficios, #proceso, #cita, #preguntas { scroll-margin-top: 90px; }
+
+.finance-band {
+  background: linear-gradient(90deg, rgba(16, 20, 25, .97), rgba(16, 20, 25, .91) 52%, rgba(16, 20, 25, .7)), url('/images/hero-car.png') center 54% / cover;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows .38s cubic-bezier(.2,.75,.25,1), opacity .28s ease;
+}
+.faq-list details[open] .faq-answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.faq-answer-inner { overflow: hidden; }
+.faq-answer p { padding-bottom: 20px; }
+
+@media (max-width: 1000px) {
+  .personal-hero-grid { gap: 35px; }
+  .personal-hero-media { height: 570px; }
+  .personal-hero h1 { font-size: clamp(44px, 5.3vw, 63px); }
+  .personal-hero .hero-actions { align-items: flex-start; flex-direction: column; gap: 19px; }
+}
+
+@media (max-width: 760px) {
+  .personal-hero { min-height: 0; }
+  .personal-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+    width: 100%;
+  }
+  .personal-hero-media {
+    order: 0;
+    width: min(100% - 36px, 580px);
+    height: 400px;
+    margin: 18px auto 0;
+    align-self: auto;
+  }
+  .personal-hero-media::before { inset: 14px -8px 0 14px; }
+  .portrait-frame img { object-position: center 17%; }
+  .portrait-caption { left: 0; bottom: 14px; min-width: 210px; }
+  .portrait-vertical { right: -2px; top: 30px; }
+  .personal-hero-copy {
+    order: 1;
+    width: min(100% - 36px, 580px);
+    margin: 0 auto;
+    padding: 43px 0 58px;
+  }
+  .personal-hero h1 { font-size: clamp(39px, 8vw, 55px); }
+  .personal-hero h1 em { white-space: normal; }
+  .personal-hero .hero-copy { font-size: 14px; }
+  .personal-hero .hero-actions { flex-direction: row; }
+  .personal-hero .hero-note { margin-top: 26px; }
+}
+
+@media (max-width: 480px) {
+  .personal-hero-media { height: 320px; }
+  .portrait-frame img { object-position: center 15%; }
+  .personal-hero-copy { padding-top: 36px; }
+  .personal-hero h1 { font-size: 40px; }
+  .personal-hero .hero-actions { flex-direction: column; align-items: stretch; }
+  .personal-hero .hero-actions .button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-hero-copy { animation: none; }
+  .faq-answer { transition: none; }
+}

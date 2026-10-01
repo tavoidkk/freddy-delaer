@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { site, whatsappUrl } from '../config/site';
+const whatsapp = whatsappUrl();
+const phone = site.phone.replace(/[^+\d]/g, '');
+---
+<Base title="Freddy Díaz Toyota Dealer | Tu próximo Toyota comienza aquí" description="Explora opciones para estrenar un Toyota con la ayuda de Freddy Díaz. Solicita una cita personalizada y conoce las opciones disponibles para ti.">
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Freddy Díaz Toyota Dealer, inicio">
+        <span class="brand-mark">FD<span></span></span>
+        <span class="brand-text"><strong>FREDDY DÍAZ</strong><small>TOYOTA DEALER</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#freddy">Conoce a Freddy</a><a href="#beneficios">Beneficios</a><a href="#proceso">Cómo funciona</a>
+      </nav>
+      <div class="header-actions">
+        {phone && <a class="header-phone" href={`tel:${phone}`}><Icon name="phone" size={17} /> {site.phone}</a>}
+        <a class="button button-small button-dark" href="#cita">Solicitar cita <Icon name="arrow" size={17} /></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="mobile-nav" aria-expanded="false"><Icon name="menu" /></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="#freddy">Conoce a Freddy</a><a href="#beneficios">Beneficios</a><a href="#proceso">Cómo funciona</a><a href="#cita">Solicitar cita</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero personal-hero" aria-labelledby="hero-title">
+      <div class="container personal-hero-grid">
+        <div class="personal-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> FREDDY DÍAZ · ASESOR DE VENTAS TOYOTA</p>
+          <h1 id="hero-title">Tu próximo Toyota empieza con <em>una conversación.</em></h1>
+          <p class="hero-copy">Soy Freddy Díaz. Quiero conocer lo que necesitas, explicarte tus opciones con claridad y ayudarte a dar el siguiente paso con confianza.</p>
+          <div class="hero-actions"><a class="button button-red" href="#cita">Hablemos de tu próximo auto <Icon name="arrow" size={19} /></a><a class="text-link" href="#freddy">Conoce cómo te ayudo <span>↓</span></a></div>
+          <div class="hero-note"><span class="hero-note-icon"><Icon name="calendar" size={18} /></span><span>Asesoría personal · Solicita una cita sin compromiso</span></div>
+        </div>
+        <div class="personal-hero-media">
+          <div class="portrait-frame"><img src="/images/freddy-portrait.png" alt="Retrato editado de Freddy Díaz con traje profesional y lentes de ver" width="1024" height="1536" fetchpriority="high" /></div>
+          <div class="portrait-caption"><span class="portrait-caption-line"></span><div><strong>FREDDY DÍAZ</strong><small>Tu asesor para el próximo paso</small></div></div>
+          <span class="portrait-vertical" aria-hidden="true">ATENCIÓN PERSONAL · TOYOTA</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar" aria-label="Nuestra forma de ayudarte">
+      <div class="container trust-grid"><div><Icon name="check" /><span>Atención personalizada</span></div><div><Icon name="check" /><span>Opciones para primeros compradores</span></div><div><Icon name="check" /><span>Beneficios para tu tranquilidad</span></div></div>
+    </section>
+
+    <section class="intro section-pad" id="freddy">
+      <div class="container intro-grid">
+        <div data-reveal><p class="eyebrow"><span class="eyebrow-line"></span> CONOCE A FREDDY</p><h2>Un asesor de tu lado.<br /><span>Una decisión más clara.</span></h2></div>
+        <div class="intro-right" data-reveal><p>Comprar un vehículo trae preguntas sobre modelos, financiamiento y beneficios. Freddy te acompaña para que puedas entender tus opciones, incluso si estás comprando por primera vez o construyendo tu crédito.</p><a class="underlined-link" href="#cita">Cuéntale a Freddy qué buscas <Icon name="arrow" size={18} /></a></div>
+      </div>
+      <div class="container feature-grid" id="beneficios">
+        <article class="feature-card" data-reveal><div class="feature-number">01</div><div class="feature-icon"><Icon name="spark" size={29} /></div><h3>Primeros compradores</h3><p>Explora programas diseñados para ayudarte a dar el primer paso, incluso si estás comenzando a construir tu crédito.</p></article>
+        <article class="feature-card" data-reveal><div class="feature-number">02</div><div class="feature-icon"><Icon name="shield" size={29} /></div><h3>Compra con tranquilidad</h3><p>Consulta la disponibilidad de garantía de por vida en motor y transmisión, y dos años de mantenimiento sin costo.</p></article>
+        <article class="feature-card" data-reveal><div class="feature-number">03</div><div class="feature-icon"><Icon name="calendar" size={29} /></div><h3>Asesoría a tu medida</h3><p>Cuéntanos qué vehículo te interesa. Freddy te ayudará a revisar opciones y coordinar el siguiente paso.</p></article>
+      </div>
+      <div class="container"><p class="section-disclaimer">Programas, financiamiento, garantía y mantenimiento sujetos a elegibilidad, aprobación, disponibilidad y términos del concesionario. Consulta las condiciones antes de tomar una decisión.</p></div>
+    </section>
+
+    <section class="finance-band" aria-labelledby="finance-title">
+      <div class="container finance-layout"><div data-reveal><p class="eyebrow light"><span class="eyebrow-line"></span> POSIBILIDADES REALES</p><h2 id="finance-title">Un comienzo que<br /><em>se adapta a ti.</em></h2></div><div class="finance-content" data-reveal><p>Para compradores elegibles, podrían existir opciones con <strong>$2,000 de inicial</strong>. Según el perfil crediticio y los términos del programa, algunas personas podrían calificar para <strong>cero enganche</strong>.</p><p>Un ID válido y Seguro Social pueden ser necesarios para evaluar opciones de financiamiento. No pedimos esos datos en esta página.</p><a class="button button-white" href="#cita">Revisar mis opciones <Icon name="arrow" size={18} /></a></div></div>
+    </section>
+
+    <section class="process section-pad" id="proceso">
+      <div class="container process-head" data-reveal><div><p class="eyebrow"><span class="eyebrow-line"></span> SIMPLE DESDE EL PRIMER MOMENTO</p><h2>Así comienza <span>tu camino.</span></h2></div><p>Tres pasos para pasar de la idea a una conversación concreta sobre tu próximo Toyota.</p></div>
+      <div class="container steps"><article data-reveal><span class="step-number">01</span><div class="step-rule"></div><h3>Cuéntanos qué buscas</h3><p>Completa el formulario con tus datos y el vehículo que tienes en mente.</p></article><article data-reveal><span class="step-number">02</span><div class="step-rule"></div><h3>Conversemos</h3><p>Freddy o su equipo se pondrá en contacto para conocer tu situación y tus prioridades.</p></article><article data-reveal><span class="step-number">03</span><div class="step-rule"></div><h3>Coordina tu visita</h3><p>Revisa las opciones disponibles y acuerda una cita según tu disponibilidad.</p></article></div>
+    </section>
+
+    <section class="form-section" id="cita">
+      <div class="container form-layout"><div class="form-aside" data-reveal><p class="eyebrow light"><span class="eyebrow-line"></span> TU PRÓXIMO PASO</p><h2>Hablemos de<br /><em>tu próximo Toyota.</em></h2><p>Déjanos tus datos y lo que buscas. Te contactaremos para conversar sobre opciones y coordinar una cita.</p><div class="aside-rule"></div><div class="aside-points"><div><Icon name="clock" size={21} /><span>Completarlo toma cerca de un minuto.</span></div><div><Icon name="shield" size={21} /><span>Tus datos se usan para atender tu solicitud.</span></div></div>{whatsapp ? <a class="aside-whatsapp" href={whatsapp} target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" size={22} /> Prefiero escribir por WhatsApp <Icon name="arrow" size={17} /></a> : <span class="aside-whatsapp aside-whatsapp-disabled" aria-disabled="true"><Icon name="whatsapp" size={22} /> WhatsApp disponible próximamente</span>}</div>
+      <div class="form-card" data-reveal><div class="form-card-head"><span>01 / SOLICITUD DE CITA</span><h3>Comencemos por conocerte</h3><p>Los campos marcados con * son obligatorios.</p></div>
+        <form id="lead-form" novalidate>
+          <div class="form-row"><div class="field"><label for="name">Nombre completo *</label><input id="name" name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="Tu nombre y apellido" /><small class="field-error" id="name-error" aria-live="polite"></small></div><div class="field"><label for="phone">Teléfono móvil *</label><input id="phone" name="phone" autocomplete="tel" inputmode="tel" required placeholder="(000) 000-0000" /><small class="field-error" id="phone-error" aria-live="polite"></small></div></div>
+          <div class="form-row"><div class="field"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="nombre@ejemplo.com" /><small class="field-error" id="email-error" aria-live="polite"></small></div><div class="field"><label for="vehicle">Vehículo de interés *</label><select id="vehicle" name="vehicle" required><option value="">Selecciona una opción</option><option value="Sedán">Sedán</option><option value="SUV">SUV</option><option value="Pickup">Pickup</option><option value="Híbrido">Híbrido</option><option value="Aún no lo sé">Aún no lo sé</option><option value="Otro">Otro</option></select><small class="field-error" id="vehicle-error" aria-live="polite"></small></div></div>
+          <div class="field"><label for="priority">¿Qué te gustaría resolver primero? *</label><select id="priority" name="priority" required><option value="">Selecciona lo más importante para ti</option><option value="Encontrar una cuota que se ajuste a mi presupuesto">Encontrar una cuota que se ajuste a mi presupuesto</option><option value="Conocer opciones de financiamiento">Conocer opciones de financiamiento</option><option value="Elegir el modelo y tamaño adecuado">Elegir el modelo y tamaño adecuado</option><option value="Explorar opciones para primeros compradores">Explorar opciones para primeros compradores</option><option value="Comparar beneficios y cobertura">Comparar beneficios y cobertura</option><option value="Aún no lo tengo claro">Aún no lo tengo claro</option></select><small class="field-error" id="priority-error" aria-live="polite"></small></div>
+          <div class="field"><label for="message">¿Algo más que debamos saber? <span>(opcional)</span></label><textarea id="message" name="message" rows="3" maxlength="500" placeholder="Cuéntanos qué buscas o qué preguntas tienes"></textarea></div>
+          <div class="honeypot" aria-hidden="true"><label for="website">Sitio web</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+          <label class="check-field"><input id="consent" name="consent" type="checkbox" required /><span>He leído la <a href="/privacidad/" target="_blank" rel="noopener noreferrer">Política de privacidad</a> y autorizo que usen mis datos para atender esta solicitud y enviarme por correo promociones y novedades. Puedo cancelar esos correos en cualquier momento. *</span></label><small class="field-error check-error" id="consent-error" aria-live="polite"></small>
+          <button class="button button-red submit-button" type="submit">Enviar solicitud <Icon name="arrow" size={19} /></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p><p class="form-fine">Enviar este formulario no garantiza financiamiento, aprobación, un vehículo ni una cita confirmada. No incluyas números de identificación, Seguro Social ni información financiera sensible.</p>
+        </form>
+      </div></div>
+    </section>
+
+    <section class="faq section-pad" id="preguntas"><div class="container faq-layout"><div data-reveal><p class="eyebrow"><span class="eyebrow-line"></span> RESPUESTAS CLARAS</p><h2>Antes de dar<br /><span>el primer paso.</span></h2><p class="faq-intro">Si tienes otra pregunta, cuéntanosla en el formulario.</p></div><div class="faq-list" data-reveal><details><summary>¿Necesito tener crédito establecido? <Icon name="chevron" size={20} /></summary><div class="faq-answer"><div class="faq-answer-inner"><p>No necesariamente. Podemos conversar sobre opciones para primeros compradores. La elegibilidad y las condiciones dependen de la evaluación y del programa disponible.</p></div></div></details><details><summary>¿La solicitud confirma mi cita? <Icon name="chevron" size={20} /></summary><div class="faq-answer"><div class="faq-answer-inner"><p>No. Recibiremos tu solicitud y nos pondremos en contacto para coordinar una fecha y hora contigo.</p></div></div></details><details><summary>¿Debo enviar mi Seguro Social aquí? <Icon name="chevron" size={20} /></summary><div class="faq-answer"><div class="faq-answer-inner"><p>No. Este formulario solo recoge datos de contacto y preferencias. Si más adelante se requiere información adicional, el equipo te explicará cómo compartirla por un canal apropiado.</p></div></div></details><details><summary>¿Los beneficios aplican a todos los vehículos? <Icon name="chevron" size={20} /></summary><div class="faq-answer"><div class="faq-answer-inner"><p>La garantía, el mantenimiento y las ofertas pueden variar según el vehículo, el programa y sus términos. Confirma los detalles con Freddy antes de decidir.</p></div></div></details></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-main"><div><a class="brand footer-brand" href="/"><span class="brand-mark">FD<span></span></span><span class="brand-text"><strong>FREDDY DÍAZ</strong><small>TOYOTA DEALER</small></span></a><p>Una atención personal para ayudarte a encontrar tu próximo Toyota.</p></div><div><span class="footer-label">EXPLORA</span><a href="#beneficios">Beneficios</a><a href="#proceso">Cómo funciona</a><a href="#cita">Solicitar cita</a></div><div><span class="footer-label">CONTACTO</span>{site.address && <span>{site.address}</span>}{site.city && <span>{site.city}</span>}{phone && <a href={`tel:${phone}`}>{site.phone}</a>}{site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}{!phone && !site.address && <span>Solicita una cita para que te contactemos.</span>}</div></div><div class="container footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><div><a href="/privacidad/">Política de privacidad</a><a href="/terminos/">Avisos y condiciones</a></div></div></footer>
+  {whatsapp && <a class="whatsapp-float" href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Escribir a Freddy por WhatsApp"><Icon name="whatsapp" size={27} /></a>}
+  <script src="../scripts/landing.ts"></script>
+</Base>
