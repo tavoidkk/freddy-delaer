@@ -3,5 +3,6 @@ import node from '@astrojs/node';
 
 export default defineConfig({
   output: 'server',
+  server: { port: 4321, host: '0.0.0.0' },
   adapter: node({ mode: 'standalone' }),
 });
