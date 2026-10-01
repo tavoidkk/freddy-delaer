@@ -5,8 +5,8 @@ const respond = (body: object, status: number) => new Response(JSON.stringify(bo
   headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
 });
 
-const allowedVehicles = new Set(['Sedán', 'SUV', 'Pickup', 'Híbrido', 'Aún no lo sé', 'Otro']);
-const allowedPriorities = new Set(['Encontrar una cuota que se ajuste a mi presupuesto', 'Conocer opciones de financiamiento', 'Elegir el modelo y tamaño adecuado', 'Explorar opciones para primeros compradores', 'Comparar beneficios y cobertura', 'Aún no lo tengo claro']);
+const allowedVehicles = new Set(['Corolla', 'Camry', 'RAV4', 'Tacoma', 'Tundra', 'Highlander', 'Grand Highlander', '4Runner', 'Corolla Cross', 'Sienna', 'Prius', 'Otro modelo Toyota', 'Vehículo usado', 'Aún no lo sé']);
+const allowedPriorities = new Set(['Encontrar una cuota que se ajuste a mi presupuesto', 'Conocer opciones de financiamiento', 'Elegir el modelo y tamaño adecuado', 'Explorar opciones para primeros compradores', 'Conocer inicial y elegibilidad', 'Comparar beneficios y cobertura', 'Aún no lo tengo claro']);
 
 export const POST: APIRoute = async ({ request }) => {
   if (!request.headers.get('content-type')?.includes('application/json')) return respond({ error: 'Formato de solicitud inválido.' }, 415);

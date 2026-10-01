@@ -1,26 +1,27 @@
-# Referentes de compra de vehículos y marca personal
+# Referentes de compra y venta de autos con enfoque hispano
 
-Verificación web realizada el 1 de octubre de 2026. Se eliminaron perfiles cuyo único destino era Linktree, Lnk.Bio u otra página de enlaces. La muestra es deliberadamente corta: los siguientes tienen un sitio propio con contenido de servicio y un Instagram identificable.
+Revisados el 1 de octubre de 2026. Esta selección prioriza marcas y asesores que comunican servicios para compradores hispanos y tienen webs con contenido sustantivo. Se incluyen ocho opciones verificadas o útiles, no diez: es preferible no completar la lista con perfiles sin web funcional o enlaces sociales dudosos.
 
-| Nombre / marca | Instagram | Sitio web | Estructura útil |
-| --- | --- | --- | --- |
-| Josh Sells Cahs | [@joshsellscahs](https://www.instagram.com/joshsellscahs/) | [joshsellscahs.com](https://joshsellscahs.com/) | Retrato y voz personal, CTA para contar qué vehículo se busca, reseñas y contenido educativo. Vendedor en concesionario; no Toyota. |
-| ShoppingWithP / Paul Monte | [@Pmontdabul](https://www.instagram.com/Pmontdabul/) | [swpcars.com](https://swpcars.com/) | CTA visible, solicitud de vehículo, explicación del proceso y respuestas sobre crédito. Corredor/concierge, no vendedor Toyota; evitar copiar cifras comerciales no corroboradas. |
-| Andrea / CarOracle | [@YourCarOracle](https://www.instagram.com/YourCarOracle/) | [caroracle.com](https://www.caroracle.com/) | Mensaje de asesoría, flujo de consulta y explicación paso a paso. Broker independiente, no vendedor de concesionario. Instagram identificado por entrevista a Andrea. |
-| Michael Calcara / The Driveway Concierge | [@TheDrivewayConciege](https://www.instagram.com/TheDrivewayConciege/) | [thedrivewayconcierge.com](https://thedrivewayconcierge.com/home-2/) | Paquetes claros, consulta inicial, testimonios y apoyo de principio a fin. Servicio de concierge de compra, no concesionario Toyota. |
+| # | Persona / marca | Web | Instagram / verificación | Enfoque que puede servir |
+| - | --- | --- | --- | --- |
+| 1 | Nacho García / Nacho Autos | [nachoautos.com](https://nachoautos.com/) | [@nachoautos](https://www.instagram.com/nachoautos/) | Marca personal en Miami, educación, reseñas y proceso de compra acompañada. |
+| 2 | Omar Quintero | [omarquinteroautobroker.com](https://omarquinteroautobroker.com/) | [@omar_business_in_progress](https://instagram.com/omar_business_in_progress) | Página personal, formulario visible, etapas del servicio, reseñas y atención a compradores primerizos. |
+| 3 | Fabiola Sotoaguilar / Integrity Auto Brokers | [integritybrokersauto.com](https://www.integritybrokersauto.com/) | La web no enlaza un perfil de Instagram verificable; el PDF lo señala y enlaza la web. | Experiencia personal, orientación sin presión y ayuda a compradores con distintas situaciones de crédito. |
+| 4 | Eric Zapien y Ricky Galvez / CarWise LA | [carwisela.com/about](https://www.carwisela.com/about) | La página consultada no enlaza Instagram directamente; el PDF lo señala y enlaza la página del equipo. | Historia de fundadores, misión comunitaria, prueba de experiencia y contenido educativo. |
+| 5 | Roger Alaniz / RA Investments | [rainvestments.us](https://rainvestments.us/) | [@All.about.cars626](https://www.instagram.com/All.about.cars626/) | Web simple que combina nombre del responsable, ubicación, contacto y contenido social. |
+| 6 | Promax Auto Broker | [promaxautobroker.com](https://www.promaxautobroker.com/) | [@promaxautobroker](https://www.instagram.com/promaxautobroker/) | Catálogo e inventario, especialidad Toyota, reseñas y explicación de financiamiento para hispanos. |
+| 7 | Daniel Fallacaro / Elite Edge Auto Broker | [Página en español](https://eliteedgeautobroker.com/Espanol) | La página en español no enlaza Instagram directamente; el PDF lo indica y enlaza la página oficial en español. | Referencia de CTA, precalificación y respuestas frecuentes. No se afirma origen latino. |
+| 8 | Josh / Josh Sells Cahs | [joshsellscahs.com](https://joshsellscahs.com/) | [@joshsellscahs](https://www.instagram.com/joshsellscahs/) | Referencia secundaria de marca personal, consultas, reseñas y videos; no enfocada específicamente al mercado latino. |
 
-## Qué adaptar a Freddy
+## Ideas para Freddy Díaz
 
-- Mantener su foto, nombre y CTA de cita en el primer pantallazo.
-- Explicar qué pasa después de enviar el formulario y recoger el vehículo de interés junto con la prioridad principal del comprador.
-- Reforzar confianza con una presentación personal y un proceso simple; agregar testimonios solo con permiso y evidencia real.
-- Evitar cifras, reseñas, garantías o promesas de aprobación sin autorización del concesionario y términos vigentes.
+- Dar protagonismo al retrato, nombre y rol de Freddy desde el primer bloque, junto al logotipo oficial del concesionario.
+- Repetir una acción principal clara: dejar datos para coordinar una cita.
+- Usar selección de modelo, necesidades del comprador y un campo opcional para contexto.
+- Mostrar requisitos y condiciones de financiamiento junto a cada promoción, evitando promesas de aprobación.
+- Mantener dirección, horario, teléfono, WhatsApp, políticas y enlace de inventario visibles.
+- Usar reseñas, cifras y garantías solo con autorización del concesionario y condiciones documentadas.
 
-## Fuentes de identidad y estructura
+## Criterio
 
-- [Sitio de Josh Sells Cahs](https://joshsellscahs.com/)
-- [Sitio de ShoppingWithP](https://swpcars.com/)
-- [Sitio de CarOracle](https://www.caroracle.com/) y [entrevista a Andrea](https://voyagela.com/interview/community-highlights-meet-andrea-of-caroracle/)
-- [Sitio de The Driveway Concierge](https://thedrivewayconcierge.com/home-2/) y [perfil que identifica a Michael y enlaza sus canales](https://linktr.ee/thedrivewayconcierge)
-
-No se completó una lista de diez porque la verificación solicitada requiere un sitio con contenido real y una cuenta de Instagram atribuible; no añadí páginas de enlace ni perfiles con web inactiva para inflar la muestra.
+Los enlaces de web e Instagram se cotejaron con páginas públicas. En las opciones 3, 4 y 7 no se confirmó un vínculo social directo desde la web consultada, por eso el PDF lo declara en vez de inventar un usuario. Los perfiles 6 y 7 son marcas/brokers y no vendedores Toyota individuales; aportan estructura, aunque no son competencia uno a uno. La selección no presume etnia por el nombre de una persona: “enfoque hispano” describe la comunicación o el público declarado por la marca.

@@ -1,11 +1,16 @@
 export const site = {
-  name: 'Freddy Díaz Toyota Dealer',
+  name: 'Freddy Díaz | Don McGill Toyota',
+  dealership: 'Don McGill Toyota',
   advisor: 'Freddy Díaz',
-  // Completar cuando el concesionario confirme estos datos.
-  phone: '',
+  // Número general de ventas publicado por el concesionario. Cámbialo aquí si Freddy confirma otro teléfono.
+  phone: '+1 844.529.1532',
+  phoneLabel: 'Ventas del concesionario',
   whatsapp: '', // Solo dígitos con código de país, por ejemplo: 15551234567
-  address: '',
-  city: '',
+  address: '11800 Katy Freeway',
+  city: 'Houston, TX 77079',
+  hours: 'Lunes a sábado, 9:00 a. m. a 7:00 p. m.',
+  dealershipUrl: 'https://www.donmcgilltoyota.com/',
+  inventoryUrl: 'https://www.donmcgilltoyota.com/new-vehicles/',
   email: '',
 };
 
