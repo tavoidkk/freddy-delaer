@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
+import node from '@astrojs/node';
 
 export default defineConfig({
-  output: 'static',
-  site: 'https://tavoidkk.github.io',
-  base: '/freddy-delaer',
+  output: 'server',
+  adapter: node({ mode: 'standalone' }),
 });
