@@ -2,10 +2,10 @@ export const site = {
   name: 'Freddy Díaz | Don McGill Toyota',
   dealership: 'Don McGill Toyota',
   advisor: 'Freddy Díaz',
-  // Número general de ventas publicado por el concesionario. Cámbialo aquí si Freddy confirma otro teléfono.
-  phone: '+1 844.529.1532',
-  phoneLabel: 'Ventas del concesionario',
-  whatsapp: '', // Solo dígitos con código de país, por ejemplo: 15551234567
+  // Datos de contacto personalizables de Freddy.
+  phone: '+1 (346) 637-0319',
+  phoneLabel: 'Habla con Freddy',
+  whatsapp: '13466370319', // Solo dígitos con código de país, por ejemplo: 15551234567
   address: '11800 Katy Freeway',
   city: 'Houston, TX 77079',
   hours: 'Lunes a sábado, 9:00 a. m. a 7:00 p. m.',
@@ -14,7 +14,7 @@ export const site = {
   email: '',
 };
 
-export const whatsappMessage = 'Hola Freddy, vi tu página y quisiera información para comprar un Toyota. ¿Me ayudas a coordinar una cita?';
+export const whatsappMessage = 'Hola Freddy, vi tu página y quiero contarte lo que busco para mi próximo Toyota. ¿Me ayudas a explorar opciones y coordinar una cita?';
 
 export function whatsappUrl() {
   const number = site.whatsapp.replace(/\D/g, '');
