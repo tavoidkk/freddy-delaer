@@ -34,11 +34,12 @@
 .inventory-cta .button{min-height:46px;padding:12px 17px;font-size:11px}
 .aside-whatsapp{display:inline-flex;align-items:center;gap:11px;margin-top:42px;font-size:12px;font-weight:800;padding-bottom:9px;border-bottom:1px solid #ed3342;transition:color .2s,border-color .2s}
 .aside-whatsapp:hover{color:#75e39a;border-color:#75e39a}
-.aside-whatsapp-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 4px 13px #25d36635;transition:transform .25s,box-shadow .25s}
-.aside-whatsapp:hover .aside-whatsapp-mark{transform:scale(1.06);box-shadow:0 6px 18px #25d36655}
+.aside-whatsapp-mark{display:grid;place-items:center;width:28px;height:28px;color:#35d574;transition:transform .25s,color .25s}
+.aside-whatsapp:hover .aside-whatsapp-mark{transform:scale(1.08);color:#70e99b}
 .aside-whatsapp>svg:last-child{margin-left:5px}
 .aside-whatsapp-disabled{color:#8b959d;border-color:#5c656c;cursor:not-allowed}
-.aside-whatsapp-disabled .aside-whatsapp-mark{background:#586168;box-shadow:none}
+.aside-whatsapp-disabled .aside-whatsapp-mark{color:#818b91}
+.form-aside:after{display:none}
 @media(max-width:900px){.model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.dealer-logo{width:106px;max-height:38px}.brand{gap:10px}.brand-text{padding-left:10px}.dealer-details-inner{grid-template-columns:1fr;gap:15px}.inventory-head{display:block}.inventory-head>p{margin-top:18px}.model-grid-wrap{margin-top:30px}.model-photo{height:176px}.inventory-cta{align-items:flex-start;flex-direction:column;margin-top:20px}.inventory-cta .button{width:100%}}
 @media(max-width:480px){.dealer-logo{width:90px}.brand-text strong{font-size:11px}.brand-text small{font-size:8px;letter-spacing:.14em}.model-grid{gap:11px}.model-photo{height:130px}.model-number{left:9px;top:9px}.model-card-content{padding:13px 11px 9px}.model-card strong{font-size:12px}.model-card-content>div>span{font-size:10px}.model-card-action{margin:0 11px 12px;font-size:10px}}
