@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import '../styles/personal.css';
 import '../styles/dealer.css';
+import '../styles/privacy-consent.css';
+import { site } from '../config/site';
 interface Props { title: string; description: string; }
 const { title, description } = Astro.props;
 ---
@@ -17,9 +19,26 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta name="meta-pixel-id" content={site.metaPixelId} />
   </head>
   <body>
     <slot />
+    <aside id="privacy-consent-banner" class="privacy-consent" data-privacy-banner hidden aria-labelledby="privacy-consent-title" aria-describedby="privacy-consent-copy">
+      <div class="privacy-consent-copy">
+        <p class="privacy-consent-eyebrow">TUS PREFERENCIAS DE PRIVACIDAD</p>
+        <h2 id="privacy-consent-title">Tú decides cómo usamos las cookies.</h2>
+        <p id="privacy-consent-copy">Usamos cookies necesarias para el sitio. Si aceptas, Meta Pixel medirá visitas y solicitudes completadas para ayudarnos a evaluar nuestros anuncios. No incluimos tu nombre, teléfono ni correo en esos eventos. Puedes cambiar tu decisión desde “Preferencias de privacidad”.</p>
+        <a href="/privacidad/">Lee la política de privacidad</a>
+      </div>
+      <div class="privacy-consent-actions">
+        <button type="button" class="privacy-consent-reject" data-privacy-reject>Rechazar cookies publicitarias</button>
+        <button type="button" class="privacy-consent-accept" data-privacy-accept>Aceptar cookies publicitarias</button>
+      </div>
+    </aside>
+    <button class="privacy-settings" type="button" data-privacy-open hidden aria-controls="privacy-consent-banner" aria-expanded="false" aria-label="Abrir preferencias de privacidad">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><path d="m19.4 15 .1.1a1.8 1.8 0 0 1-2.5 2.5l-.1-.1a1.8 1.8 0 0 0-3 .9v.2a1.8 1.8 0 0 1-3.6 0v-.2a1.8 1.8 0 0 0-3-.9l-.1.1a1.8 1.8 0 0 1-2.5-2.5l.1-.1a1.8 1.8 0 0 0-.9-3h-.2a1.8 1.8 0 0 1 0-3.6h.2a1.8 1.8 0 0 0 .9-3l-.1-.1a1.8 1.8 0 0 1 2.5-2.5l.1.1a1.8 1.8 0 0 0 3-.9v-.2a1.8 1.8 0 0 1 3.6 0v.2a1.8 1.8 0 0 0 3 .9l.1-.1a1.8 1.8 0 0 1 2.5 2.5l-.1.1a1.8 1.8 0 0 0 .9 3h.2a1.8 1.8 0 0 1 0 3.6h-.2a1.8 1.8 0 0 0-.9 3Z"/></svg>
+      <span>Preferencias de privacidad</span>
+    </button>
     <script>
       const observer = new IntersectionObserver((entries) => {
         for (const entry of entries) {
@@ -31,5 +50,6 @@ const { title, description } = Astro.props;
       }, { threshold: 0.12 });
       document.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element));
     </script>
+    <script src="../scripts/privacy-consent.ts"></script>
   </body>
 </html>

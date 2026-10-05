@@ -71,6 +71,7 @@ if (form) {
       const response = await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || 'No pudimos enviar la solicitud. Inténtalo de nuevo.');
+      window.dispatchEvent(new Event('freddy:lead-submitted'));
       form.reset();
       names.forEach((name) => error(name, ''));
       if (status) { status.textContent = '¡Solicitud enviada! Nos pondremos en contacto contigo para coordinar tu cita.'; status.className = 'form-status success'; }

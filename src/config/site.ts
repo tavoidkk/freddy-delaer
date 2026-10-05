@@ -2,6 +2,8 @@ export const site = {
   name: 'Freddy Díaz | Don McGill Toyota',
   dealership: 'Don McGill Toyota',
   advisor: 'Freddy Díaz',
+  // Pixel ID is public and belongs here so it can be changed without editing scripts.
+  metaPixelId: '1112239225055765',
   // Datos de contacto personalizables de Freddy.
   phone: '+1 (346) 637-0319',
   phoneLabel: 'Habla con Freddy',
