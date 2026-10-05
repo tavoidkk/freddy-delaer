@@ -1,0 +1,158 @@
+.form-step[hidden],
+.lead-success[hidden] {
+  display: none !important;
+}
+
+.form-progress {
+  display: grid;
+  gap: 9px;
+  margin: -5px 0 25px;
+  color: #7b8389;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.form-progress-track {
+  height: 4px;
+  overflow: hidden;
+  background: #edf0f1;
+}
+
+.form-progress-track span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #d7192a;
+  transition: width .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.form-step.is-entering {
+  animation: form-step-enter .38s cubic-bezier(.2,.75,.25,1) both;
+}
+
+.form-step-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 2px 0 22px;
+}
+
+.form-step-heading>span {
+  display: grid;
+  flex: 0 0 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid #f0c8cc;
+  border-radius: 50%;
+  color: #b51b29;
+  font: 800 11px Manrope, sans-serif;
+}
+
+.form-step-heading h4 {
+  margin: 0 0 4px;
+  color: #191c20;
+  font: 800 16px/1.35 Manrope, sans-serif;
+  letter-spacing: -.025em;
+}
+
+.form-step-heading h4:focus { outline: none; }
+.form-step-heading p { margin: 0; color: #737b81; font-size: 11px; line-height: 1.6; }
+.form-next { width: 100%; justify-content: space-between; margin-top: 3px; }
+
+.contact-field {
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+.contact-field legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.contact-method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.contact-method { position: relative; display: block; margin: 0; cursor: pointer; }
+.contact-method input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+.contact-method-card {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid #dfe3e5;
+  background: #fafbfb;
+  transition: border-color .2s, background .2s, box-shadow .2s, transform .2s;
+}
+
+.contact-method:hover .contact-method-card { transform: translateY(-2px); border-color: #c4c9cc; background: #fff; }
+.contact-method input:checked + .contact-method-card { border-color: #ce2432; background: #fff9f9; box-shadow: 0 0 0 2px #d7192a12; }
+.contact-method input:focus-visible + .contact-method-card { outline: 3px solid #d7192a55; outline-offset: 2px; }
+.contact-method-icon { display: grid; width: 30px; height: 30px; place-items: center; color: #b51b29; }
+.contact-method-whatsapp .contact-method-icon { border-radius: 50%; background: #e9f9ee; color: #168842; }
+.contact-method-card strong { color: #22272b; font-size: 11px; }
+.contact-method-card small { color: #7b8389; font-size: 9px; line-height: 1.4; }
+.contact-field[aria-invalid="true"] .contact-method-card { border-color: #c3202e; }
+.contact-field .field-error { margin-top: 7px; }
+
+.form-step-actions { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 12px; margin-top: 22px; }
+.form-step-actions .submit-button { min-height: 54px; margin: 0; }
+.form-back { display: inline-flex; min-height: 44px; align-items: center; gap: 5px; padding: 0 4px; border: 0; background: transparent; color: #596168; font-size: 11px; font-weight: 800; }
+.form-back svg { transform: rotate(90deg); transition: transform .2s; }
+.form-back:hover { color: #b51b29; }
+.form-back:hover svg { transform: translateX(-3px) rotate(90deg); }
+
+.form-status { min-height: 0; }
+.form-status:not(:empty) { padding: 10px 12px; border-left: 3px solid currentColor; background: #fff7f7; animation: form-status-enter .24s ease both; }
+
+.lead-success {
+  min-height: 400px;
+  align-content: center;
+  justify-items: center;
+  padding: 48px 24px;
+  text-align: center;
+  animation: form-step-enter .48s cubic-bezier(.2,.75,.25,1) both;
+}
+
+.success-mark { display: grid; width: 76px; height: 76px; place-items: center; margin-bottom: 23px; border-radius: 50%; background: #edf8f1; color: #16824a; animation: success-pop .55s .08s cubic-bezier(.2,1.5,.4,1) both; }
+.success-mark svg { width: 58px; height: 58px; overflow: visible; }
+.success-mark circle { stroke: currentColor; stroke-width: 2.5; stroke-dasharray: 170; stroke-dashoffset: 170; animation: success-draw .65s .18s ease forwards; }
+.success-mark path { stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 45; stroke-dashoffset: 45; animation: success-draw .42s .55s ease forwards; }
+.success-eyebrow { margin: 0 0 9px; color: #16824a; font-size: 9px; font-weight: 800; letter-spacing: .17em; }
+.lead-success h3 { margin: 0 0 10px; color: #191c20; font: 800 clamp(23px,3vw,30px)/1.2 Manrope, sans-serif; letter-spacing: -.04em; }
+.lead-success>p:not(.success-eyebrow) { max-width: 390px; margin: 0; color: #626b72; font-size: 13px; line-height: 1.75; }
+.success-contact-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 23px; color: #188847; font-size: 11px; font-weight: 800; transition: gap .2s; }
+.success-contact-link:hover { gap: 13px; }
+
+@keyframes form-step-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes form-status-enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes success-pop { from { opacity: 0; transform: scale(.65); } to { opacity: 1; transform: scale(1); } }
+@keyframes success-draw { to { stroke-dashoffset: 0; } }
+
+@media(max-width:760px) {
+  .form-progress { margin-top: 0; }
+  .lead-success { min-height: 340px; }
+}
+
+@media(max-width:480px) {
+  .contact-method-grid { gap: 6px; }
+  .contact-method-card { min-height: 102px; padding: 9px 8px; }
+  .contact-method-card small { font-size: 8px; }
+  .form-step-actions { grid-template-columns: 1fr; gap: 8px; }
+  .form-step-actions .submit-button { grid-row: 1; }
+  .form-back { justify-self: start; min-height: 34px; }
+  .lead-success { padding-inline: 8px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .form-progress-track span,.contact-method-card,.form-back svg,.success-contact-link { transition: none; }
+  .form-step.is-entering,.form-status:not(:empty),.lead-success,.success-mark,.success-mark circle,.success-mark path { animation: none; }
+}

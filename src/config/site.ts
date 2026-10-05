@@ -12,7 +12,6 @@ export const site = {
   city: 'Houston, TX 77079',
   hours: 'Lunes a sábado, 9:00 a. m. a 7:00 p. m.',
   dealershipUrl: 'https://www.donmcgilltoyota.com/',
-  inventoryUrl: 'https://www.donmcgilltoyota.com/new-vehicles/',
   email: '',
 };
 
